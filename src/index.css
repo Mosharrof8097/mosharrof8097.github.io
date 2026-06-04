@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #ffffff;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Mobile section padding override */
+@media (max-width: 640px) {
+  .section-pad { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+@media print {
+  @page { margin: 1.2cm; size: A4 portrait; }
+
+  /* hide everything except print root */
+  body > *:not(#cv-print-root) { display: none !important; }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  #cv-print-root {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    background: white !important;
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+}

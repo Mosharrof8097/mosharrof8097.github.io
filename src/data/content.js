@@ -1,0 +1,577 @@
+export const profile = {
+  name: "Md Mosharrof Hossain",
+  title: "Flutter Developer & AI Researcher",
+  taglines: [
+    "Building Mobile Apps",
+    "Researching AI Systems",
+    "Exploring VLSI & Semiconductors",
+    "Aspiring PhD Researcher",
+    "Founder of AdmiroTech",
+  ],
+  bio: "CSE undergraduate at Mymensingh Engineering College with a passion for building real-world mobile applications and conducting research in AI systems. I bridge the gap between software engineering and hardware — from shipping Flutter apps for clients worldwide to publishing research on deep learning at international conferences.",
+  location: "Naogaon, Rajshahi, Bangladesh",
+  email: "mdmosharrofhossain455@gmail.com",
+  phone: "+8801756199193",
+  whatsapp: "https://wa.me/8801756199193",
+  linkedin: "https://www.linkedin.com/in/md-mosharrof-hossain-1541772b9/",
+  github: "https://github.com/Mosharrof8097",
+  portfolio: "https://mosharrof8097.github.io",
+  photo: "/images/profile.jpg",
+};
+
+export const education = [
+  {
+    degree: "Bachelor of Science in Computer Science & Engineering",
+    institution: "Mymensingh Engineering College",
+    period: "Oct 2023 – Oct 2027",
+    status: "Ongoing (4th Semester)",
+    focus: "AI Systems, Computer Architecture, VLSI Design, Algorithms",
+  },
+];
+
+export const experience = [
+  {
+    role: "Research Trainee",
+    org: "Learnix Research Lab",
+    period: "Apr 2026 – Present",
+    type: "Remote · AI & Data Science",
+    points: [
+      "Conducting AI/ML research and literature reviews",
+      "Contributing to research publications targeting IEEE/conference venues",
+      "Working on real-world AI problems under professional mentorship",
+    ],
+  },
+  {
+    role: "Executive Member — VLSI & Semiconductor Wing",
+    org: "Alpha Science Lab (ASL)",
+    period: "Feb 2026 – Present",
+    type: "Mymensingh Engineering College",
+    points: [
+      "Exploring chip design, circuit analysis, and the future of semiconductor technology",
+      "Co-organized World RISC-V Days Mymensingh with keynotes from Ulkasemi, ChipMentors, and Siliconova CEOs",
+      "Hosted hands-on RISC-V SoC Design on FPGA workshop — participants built Traffic Light Controller on FPGA",
+      "Selected as 1 of 15 global winners at Ulkasemi Seminar & Prize-Giving (645+ participants worldwide)",
+    ],
+  },
+  {
+    role: "Founder & Lead Developer",
+    org: "AdmiroTech",
+    period: "2025 – Present",
+    type: "Software Agency · Bangladesh",
+    points: [
+      "Built enterprise Flutter applications for clients across Bangladesh, Sweden, and Japan",
+      "Developed payroll, e-commerce, and agency management systems",
+      "Managing end-to-end product development with clean architecture principles",
+    ],
+  },
+];
+
+export const research = [
+  {
+    title: "Hybrid LSTM-Transformer Framework for Multi-Horizon Solar Irradiance Forecasting",
+    venue: "ICETAEE 2026 — Department of Electrical Engineering, NIT Raipur, India",
+    status: "Accepted",
+    year: "2026",
+    type: "Conference Paper",
+    paperId: "Paper ID: 92",
+    coAuthors: ["Intisar Islam Akondo"],
+    abstract:
+      "A hybrid deep learning architecture combining LSTM and Transformer models to improve multi-horizon solar irradiance forecasting accuracy, contributing toward smarter and more reliable renewable energy systems.",
+    tags: ["Deep Learning", "LSTM", "Transformer", "Solar Energy", "Renewable Energy", "Time Series"],
+  },
+  {
+    title: "Rice Disease Detection using Deep Learning with Explainable AI",
+    venue: "Journal Submission — Under Review",
+    status: "Under Review",
+    year: "2026",
+    type: "Journal Paper",
+    paperId: null,
+    coAuthors: [],
+    abstract:
+      "An 8-class CNN-based deep learning model for automated rice disease detection with XAI techniques including GradCAM, t-SNE feature visualization, and attention heatmaps for clinical interpretability.",
+    tags: ["Computer Vision", "CNN", "XAI", "GradCAM", "Agriculture AI", "Bangladesh"],
+    figures: [
+      { label: "Model Architecture", path: "/images/research/model_architecture.png" },
+      { label: "GradCAM Visualization", path: "/images/research/gradcam_grid.png" },
+      { label: "ROC Curves", path: "/images/research/roc_curves.png" },
+      { label: "t-SNE Features", path: "/images/research/feature_tsne.png" },
+    ],
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    featured: true,
+    name: "Lönmeter",
+    tagline: "Swedish Fleet Payroll & Financial Management",
+    category: "Flutter",
+    description:
+      "A scalable, offline-first payroll engine for Swedish fleet operations (Uber, Bolt). Automates driver commission calculations, employer contributions (31.42% Arbetsgivaravgifter), FORA pensions, and tax withholding with PDF/Excel export.",
+    tech: ["Flutter", "Riverpod", "Supabase", "Hive", "FL Chart"],
+    highlights: ["Swedish tax compliance", "Offline-first", "Multi-language (EN/SV)", "PDF & Excel export"],
+    type: "Client Project",
+    client: "Sweden",
+    github: null,
+    live: null,
+  },
+  {
+    id: 2,
+    featured: true,
+    name: "SRB Mall",
+    tagline: "Multi-Vendor E-Commerce Platform",
+    category: "Flutter",
+    description:
+      "A full-featured multi-vendor e-commerce app with separate User and Seller apps. Includes Secure Auth 2.0, product browsing, cart & wishlist, real-time order tracking, and direct chat with sellers. Near Google Play Store launch.",
+    tech: ["Flutter", "Dart", "Firebase", "Provider"],
+    highlights: ["Dual app (User + Seller)", "Real-time tracking", "Secure Auth 2.0", "Play Store ready"],
+    type: "Own Product",
+    client: null,
+    github: null,
+    live: null,
+  },
+  {
+    id: 3,
+    name: "Halal E-Commerce App",
+    tagline: "Grocery & Food App for Japan Market",
+    category: "Flutter",
+    description:
+      "A clean halal grocery and food e-commerce mobile application built for a Japanese client. Features intuitive navigation, smooth cart flows, and UI tailored for the halal food industry with Provider state management.",
+    tech: ["Flutter", "Provider", "Dart"],
+    highlights: ["Japan client", "Clean architecture", "Halal food focused", "Private repo"],
+    type: "Freelance",
+    client: "Japan",
+    github: null,
+    live: null,
+  },
+  {
+    id: 4,
+    featured: true,
+    name: "AdmiroTech Agency IRP",
+    tagline: "Enterprise Agency Resource Planning System",
+    category: "Flutter",
+    description:
+      "A premium Flutter-based Agency Resource Planning system with 4-level RBAC, dedicated client portal, project timelines, team utilization charts, invoice generator with bKash/Nagad support, and bulk Excel import.",
+    tech: ["Flutter", "Provider", "Hive", "GoRouter"],
+    highlights: ["4-level RBAC", "Client portal", "Invoice generator", "Web + Desktop"],
+    type: "Own Tool",
+    client: null,
+    github: null,
+    live: null,
+  },
+  {
+    id: 5,
+    name: "Mudi Khata (মুদি খাতা)",
+    tagline: "Digital Ledger for Local Grocery Stores",
+    category: "Flutter",
+    description:
+      "A production-grade Android app for small grocery store owners to digitize their ledger system. Features real-time dashboard, 7-day bar chart visualization, advance balance logic, and Firebase cloud sync.",
+    tech: ["Flutter", "Firebase", "Provider", "FL Chart"],
+    highlights: ["Real-time dashboard", "Bar chart analytics", "Firebase sync", "Bengali UI"],
+    type: "Open Source",
+    client: null,
+    github: "https://github.com/Mosharrof8097",
+    live: null,
+  },
+  {
+    id: 6,
+    name: "HardwareHub",
+    tagline: "Hardware Shop POS & Management System",
+    category: "Web",
+    description:
+      "A full-stack Progressive Web App for hardware shops with POS screen, inventory management, customer credit tracking, PDF invoice generation, supplier management, and product sales analytics (top/slow sellers with charts).",
+    tech: ["React", "Node.js", "PostgreSQL", "Tailwind", "Prisma", "Redis"],
+    highlights: ["PWA (offline)", "PDF invoices", "Sales analytics", "Credit management"],
+    type: "Product",
+    client: null,
+    github: null,
+    live: null,
+  },
+  {
+    id: 7,
+    name: "Rice Disease Detection App",
+    tagline: "AI-Powered Rice Crop Disease Classifier",
+    category: "AI",
+    description:
+      "A Flask-based web application wrapping a trained CNN model for real-time rice disease detection across 8 classes. Provides disease information, treatment recommendations, and severity levels in both English and Bangla.",
+    tech: ["Python", "Flask", "PyTorch", "OpenCV"],
+    highlights: ["8-class CNN", "Treatment advice", "Bangla + English", "Research companion"],
+    type: "Research Project",
+    client: null,
+    github: null,
+    live: null,
+  },
+];
+
+export const skills = {
+  "Mobile Development": {
+    icon: "📱",
+    items: ["Flutter", "Dart", "Android", "Riverpod", "Provider", "Hive", "Firebase"],
+  },
+  "Web & Backend": {
+    icon: "🌐",
+    items: ["React.js", "Node.js", "Express", "PostgreSQL", "Prisma", "Supabase", "REST API"],
+  },
+  "AI & Machine Learning": {
+    icon: "🧠",
+    items: ["PyTorch", "CNN", "LSTM", "Transformer", "OpenCV", "GradCAM", "Python"],
+  },
+  "Systems & Hardware": {
+    icon: "⚙️",
+    items: ["C/C++", "RISC-V", "FPGA", "VLSI Design", "Logic Design", "Computer Architecture"],
+  },
+  "Tools & DevOps": {
+    icon: "🛠️",
+    items: ["Git", "GitHub", "Docker", "VS Code", "Linux", "Jupyter Notebook"],
+  },
+};
+
+export const certifications = [
+  {
+    name: "Generative AI for Educators",
+    issuer: "Google for Education × MIT",
+    date: "November 2, 2025",
+    score: "100/100",
+    id: "435035787",
+  },
+  {
+    name: "Conda Basics",
+    issuer: "Anaconda",
+    date: "2025",
+    score: null,
+    id: null,
+  },
+  {
+    name: "SQL (Basic)",
+    issuer: "HackerRank",
+    date: "2025",
+    score: null,
+    id: null,
+  },
+];
+
+export const achievements = [
+  {
+    title: "1 of 15 Global Winners — Ulkasemi Seminar",
+    desc: "Selected from 645+ participants worldwide at Ulkasemi Seminar & Prize-Giving Ceremony, Ulkasemi Design Centre, Dhaka.",
+    year: "2025",
+    icon: "🏆",
+  },
+  {
+    title: "Paper Accepted at ICETAEE 2026",
+    desc: "First research paper accepted at an international conference organized by NIT Raipur, India.",
+    year: "2026",
+    icon: "📄",
+  },
+  {
+    title: "Featured in Alpha Science Lab Magazine 1.0",
+    desc: "Article on 'How AI Tools are Transforming the Way Students Learn Programming' featured.",
+    year: "2025",
+    icon: "✍️",
+  },
+];
+
+export const blog = [
+  {
+    id: "microcontroller-abbreviations",
+    title: "Microcontroller & Hardware World: Key Abbreviations Explained",
+    summary:
+      "Are these abbreviations unfamiliar to you? ALU, SRAM, UART, ARM — the essential vocabulary of the microcontroller and hardware world. Without these, modern technology simply cannot function!",
+    tags: ["Hardware", "Microcontroller", "Engineering", "Embedded Systems"],
+    date: "2025",
+    featured: true,
+    cover: "/images/blog/abbrev_1.jpg",
+    content: {
+      intro: `Are these abbreviations unfamiliar to you? 🤔\n\nThe essential vocabulary of the microcontroller and hardware world — abbreviations like ALU, SRAM, UART, and ARM. Without these, modern technology simply cannot function!\n\nWhich abbreviation was the hardest for you to remember when you first started learning?`,
+      sections: [
+        {
+          type: "image-grid",
+          portrait: true,
+          caption: "My handwritten notes — all the key hardware abbreviations at a glance",
+          images: [
+            "/images/blog/abbrev_1.jpg",
+            "/images/blog/abbrev_2.jpg",
+            "/images/blog/abbrev_3.jpg",
+            "/images/blog/abbrev_4.jpg",
+          ],
+        },
+        {
+          type: "glossary",
+          title: "Page 1 — Core Abbreviations",
+          items: [
+            { abbr: "MPU", full: "Microprocessor Unit" },
+            { abbr: "A/D (ADC)", full: "Analog to Digital Converter" },
+            { abbr: "I/O", full: "Input / Output" },
+            { abbr: "RAM", full: "Random Access Memory" },
+            { abbr: "ROM", full: "Read Only Memory" },
+            { abbr: "AVR", full: "Alf-Egil Bogen Vegard Wollan RISC" },
+            { abbr: "PIC", full: "Peripheral Interface Controller" },
+            { abbr: "MCS", full: "Microcontroller System" },
+            { abbr: "MSP", full: "Mixed Signal Processor" },
+            { abbr: "DAC", full: "Digital to Analog Converter" },
+            { abbr: "CPU", full: "Central Processing Unit" },
+            { abbr: "EPROM", full: "Erasable Programmable Read Only Memory" },
+            { abbr: "PIO", full: "Peripheral Input Output" },
+            { abbr: "I/OM", full: "Input Output Memory" },
+            { abbr: "SRAM", full: "Static Random Access Memory" },
+            { abbr: "PCB", full: "Printed Circuit Board" },
+          ],
+        },
+        {
+          type: "glossary",
+          title: "Page 2 — More Key Terms",
+          items: [
+            { abbr: "MCU", full: "Microcontroller Unit" },
+            { abbr: "PC", full: "Personal Computers" },
+            { abbr: "MP", full: "Microprocessor" },
+            { abbr: "MC", full: "Microcontroller" },
+            { abbr: "ALU", full: "Arithmetic Logical Unit" },
+            { abbr: "EEPROM", full: "Electrically Erasable Programmable Read Only Memory" },
+            { abbr: "PROM", full: "Programmable Read Only Memory" },
+            { abbr: "DRAM", full: "Dynamic Random Access Memory" },
+            { abbr: "OSC", full: "Oscillator" },
+            { abbr: "MSB", full: "Most Significant Bit" },
+            { abbr: "LSB", full: "Least Significant Bit" },
+            { abbr: "TCON", full: "Timer Control" },
+            { abbr: "ISR", full: "Interrupt Service Routine" },
+            { abbr: "XTAL", full: "External Crystal Oscillator" },
+            { abbr: "RST", full: "Reset" },
+            { abbr: "RxD", full: "Received Data" },
+            { abbr: "TxD", full: "Transmit Data" },
+          ],
+        },
+        {
+          type: "glossary",
+          title: "Page 3 — Advanced Terms",
+          items: [
+            { abbr: "HMOS", full: "High Density Metal Oxide Semiconductor" },
+            { abbr: "LC", full: "Inductor Capacitor" },
+            { abbr: "CY", full: "Carry Flag" },
+            { abbr: "OV", full: "Overflow Flag" },
+            { abbr: "RS", full: "Register Select" },
+            { abbr: "P", full: "Parity" },
+            { abbr: "SCON", full: "Serial Control" },
+            { abbr: "USB", full: "Universal Serial Bus" },
+            { abbr: "IP-core", full: "Intellectual Property Core" },
+            { abbr: "MIPS", full: "Million Instructions Per Second" },
+            { abbr: "ARM", full: "Advanced RISC Machine" },
+            { abbr: "TB8", full: "Transmission Bit 8" },
+            { abbr: "RB8", full: "Receiving Bit 8" },
+            { abbr: "LED", full: "Light Emitting Diode" },
+            { abbr: "LCD", full: "Liquid Crystal Display" },
+            { abbr: "API", full: "Application Programmable Interface" },
+          ],
+        },
+        {
+          type: "glossary",
+          title: "Page 4 — Final Terms",
+          items: [
+            { abbr: "RTC", full: "Real Time Clock" },
+            { abbr: "CAD", full: "Computer Aided Design" },
+            { abbr: "IDE", full: "Integrated Development Environment" },
+            { abbr: "PPI", full: "Programmable Peripheral Interface" },
+            { abbr: "POE", full: "Power Over Ethernet" },
+            { abbr: "MBPS", full: "Megabit Per Second" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "cse-first-year-recap",
+    title: "My Learning Journey: BSc in CSE — First Year Recap",
+    summary:
+      "A detailed recap of my first year studying Computer Science & Engineering — covering Discrete Mathematics, Digital Logic Design, and my hands-on 2-bit ALU mini project built in Logisim.",
+    tags: ["CSE", "Learning Journey", "DLD", "Discrete Math", "ALU", "Logisim"],
+    date: "2025",
+    featured: true,
+    cover: "/images/blog/alu_project.jpg",
+    content: {
+      intro: `As a first-year CSE student, I've completed two foundational subjects that shaped my understanding of logic, mathematics, and hardware design. Here's a detailed breakdown of what I learned — and built.`,
+      sections: [
+        {
+          type: "subject",
+          emoji: "📘",
+          title: "1st Semester — Discrete Mathematics",
+          desc: "This subject gave me the mathematical foundation required for computer science.",
+          topics: [
+            { icon: "🔹", label: "Set Theory", detail: "Sets, subsets, power sets, operations, Cartesian product" },
+            { icon: "🔹", label: "Logic & Propositional Calculus", detail: "Propositions, truth tables, logical equivalence, quantifiers, rules of inference" },
+            { icon: "🔹", label: "Relations & Functions", detail: "Domain, range, injective/surjective/bijective functions, composition" },
+            { icon: "🔹", label: "Combinatorics", detail: "Permutations, combinations, pigeonhole principle, inclusion-exclusion" },
+            { icon: "🔹", label: "Graph Theory", detail: "Graphs, trees, paths, cycles, connectivity, graph coloring" },
+            { icon: "🔹", label: "Algorithms & Complexity", detail: "Big-O notation, time/space complexity, recursion, basic algorithm analysis" },
+          ],
+          note: "This course built my reasoning ability, which is helping me in logic building and competitive programming.",
+        },
+        {
+          type: "subject",
+          emoji: "⚙️",
+          title: "2nd Semester — Digital Logic Design (DLD)",
+          desc: "In this course, I learned how digital systems work at the logic level.",
+          topics: [
+            { icon: "🔹", label: "Number Systems", detail: "Binary, octal, hex, 2's complement" },
+            { icon: "🔹", label: "Boolean Algebra", detail: "Gate simplification, logic expressions" },
+            { icon: "🔹", label: "Karnaugh Maps", detail: "Circuit minimization techniques" },
+            { icon: "🔹", label: "Combinational Circuits", detail: "MUX, decoders, adders" },
+            { icon: "🔹", label: "Sequential Circuits", detail: "Flip-Flops, counters, registers" },
+          ],
+          note: null,
+        },
+        {
+          type: "project",
+          emoji: "💡",
+          title: "Mini Project: 2-bit ALU with 8 Operations",
+          desc: "I designed and built a 2-bit ALU using Logisim, capable of performing 8 essential operations:",
+          ops: [
+            { cat: "➕ Arithmetic", items: ["Addition", "Subtraction", "Increment"] },
+            { cat: "⚙️ Logical", items: ["AND", "OR", "NOR"] },
+            { cat: "🔀 Bitwise Shift", items: ["Left Shift", "Right Shift"] },
+          ],
+          note: "The ALU takes two 2-bit inputs (A and B) and uses a 3-bit control signal to dynamically select operations. This project strengthened my understanding of MUX-controlled operation selection, gate-level design, and practical ALU architecture principles.",
+          images: ["/images/blog/alu_project.jpg"],
+          imageCaption: "Team Alpha vs Team Bravo — 2-bit ALU breadboard implementation",
+        },
+      ],
+    },
+  },
+  {
+    id: "ai-tools-programming",
+    title: "How AI Tools are Transforming the Way Students Learn Programming",
+    summary:
+      "Exploring how ChatGPT, GitHub Copilot, and Replit Ghostwriter are reshaping coding education — making learning faster, smarter, and more creative than ever.",
+    tags: ["AI in Education", "ChatGPT", "GitHub Copilot", "Replit"],
+    date: "2025",
+    featured: false,
+    cover: "/images/blog/ai_tools.jpg",
+    content: {
+      intro: `HUGE thank you to Alpha Science Lab for sharing my post on this topic! 🌸\n\nIt's amazing to see the discussion around tools like ChatGPT, GitHub Copilot, and Replit Ghostwriter. The future of coding education is here — and it's smarter, faster, and more creative than ever.\n\nWhich AI tool has changed your programming game?`,
+      sections: [
+        {
+          type: "subject",
+          emoji: "🤖",
+          title: "AI Tools Reshaping How Students Code",
+          desc: "From instant feedback to intelligent code suggestions, AI assistants are fundamentally changing the learning experience.",
+          topics: [
+            { icon: "🔹", label: "ChatGPT", detail: "Interactive coding companion — explains concepts, debugs code, answers questions instantly" },
+            { icon: "🔹", label: "GitHub Copilot", detail: "AI code suggestions inside IDEs — helps students write code faster with context-aware completions" },
+            { icon: "🔹", label: "Replit Ghostwriter", detail: "Browser-based AI coding — enables coding and learning without any local setup" },
+          ],
+          note: "AI isn't replacing programmers — it's empowering them to think smarter and build faster.",
+        },
+        {
+          type: "subject",
+          emoji: "✨",
+          title: "Key Highlights",
+          desc: "What makes AI tools so powerful for learners:",
+          topics: [
+            { icon: "🔹", label: "Instant Debugging", detail: "AI helps students debug and learn from errors in real time" },
+            { icon: "🔹", label: "Personalized Feedback", detail: "Tailored suggestions and explanations based on your specific code" },
+            { icon: "🔹", label: "Creativity Boost", detail: "AI encourages experimentation and creative problem-solving approaches" },
+            { icon: "🔹", label: "Faster Learning Curve", detail: "Students can focus on logic and architecture instead of syntax memorization" },
+          ],
+          note: "Featured in Alpha Science Lab Magazine 1.0 — presented to the MEC CSE community.",
+        },
+      ],
+    },
+  },
+  {
+    id: "vlsi-asl-journey",
+    title: "Joining the VLSI & Semiconductor Wing at Alpha Science Lab",
+    summary:
+      "Thrilled to share that I've been selected as an Executive Member of the VLSI and Semiconductor Wing at Alpha Science Lab — a dream come true in the world of chip design and semiconductor technology.",
+    tags: ["VLSI", "Semiconductor", "Alpha Science Lab", "ASL", "Career"],
+    date: "Feb 2026",
+    featured: false,
+    cover: "/images/blog/vlsi_wing.jpg",
+    content: {
+      intro: `Thrilled to be part of the VLSI and Semiconductor wing at Alpha Science Lab (ASL)! 🚀\n\nI am excited to share that I have been selected as an Executive Member of the VLSI and Semiconductor Wing at Alpha Science Lab (ASL). The world of semiconductors has always fascinated me — and being able to work in this sector is a dream come true.`,
+      sections: [
+        {
+          type: "subject",
+          emoji: "⚡",
+          title: "What I'm Exploring at ASL",
+          desc: "My focus areas as an Executive Member of the VLSI & Semiconductor Wing:",
+          topics: [
+            { icon: "🔹", label: "Chip Design", detail: "Learning digital circuit design principles and IC architecture fundamentals" },
+            { icon: "🔹", label: "Circuit Analysis", detail: "Analyzing and understanding semiconductor circuit behaviors" },
+            { icon: "🔹", label: "Semiconductor Technology", detail: "Exploring the future of semiconductor innovation, FPGA, and SoC design" },
+            { icon: "🔹", label: "RISC-V Architecture", detail: "Hands-on work with open-source RISC-V ISA and FPGA-based implementations" },
+          ],
+          note: "Special thanks to Md. Jannatul Nayem vai — your journey and work in this field have been a huge inspiration. Thank you for being a guiding light.",
+        },
+        {
+          type: "subject",
+          emoji: "🎯",
+          title: "Why Semiconductors?",
+          desc: "Bangladesh's semiconductor journey is just beginning — and I want to be part of this transformation.",
+          topics: [
+            { icon: "🔹", label: "Local Impact", detail: "Applying global tech knowledge to solve Bangladesh's engineering challenges" },
+            { icon: "🔹", label: "Future of Computing", detail: "VLSI and FPGA are at the heart of AI accelerators and next-gen processors" },
+            { icon: "🔹", label: "Research Foundation", detail: "Hardware knowledge directly strengthens my AI systems research goals" },
+          ],
+          note: "Looking forward to a productive journey of learning and innovation at ASL!",
+        },
+        {
+          type: "image-grid",
+          caption: "Alpha Science Lab — VLSI & Semiconductor Wing",
+          images: [
+            "/images/blog/vlsi_wing.jpg",
+            "/images/blog/asl_vlsi.jpg",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: "world-riscv-days",
+    title: "Organizing World RISC-V Days Mymensingh: A Transformative Experience",
+    summary:
+      "Being part of the organizing team for World RISC-V Days at Mymensingh Engineering College reshaped how I see Bangladesh's semiconductor future — featuring keynotes from Ulkasemi, ChipMentors, Siliconova and FPGA hands-on workshops.",
+    tags: ["RISC-V", "FPGA", "Semiconductor", "Bangladesh", "ASL", "Open Hardware"],
+    date: "2026",
+    featured: false,
+    cover: "/images/blog/riscv_days.jpg",
+    content: {
+      intro: `Proud to be part of the organizing team of World RISC-V Days, Mymensingh. 🚀\n\nBeing involved behind the scenes was an incredible learning experience. From understanding Bangladesh's growing semiconductor ecosystem to exploring the future of RISC-V and open hardware, every session reshaped how I see my career path.`,
+      sections: [
+        {
+          type: "subject",
+          emoji: "🎤",
+          title: "Distinguished Speakers",
+          desc: "We were honored to host leading voices from Bangladesh's semiconductor and RISC-V ecosystem:",
+          topics: [
+            { icon: "🔹", label: "Prof. Dr. Muhammad Mustafa Hossain", detail: "Semiconductor research advancement, global academic collaboration, and the future of open hardware architectures" },
+            { icon: "🔹", label: "Dr. Mizan Rahman", detail: "COO, Ulkasemi & VP, Bangladesh Semiconductor Industry Association — Bangladesh's semiconductor landscape and industry-academia collaboration" },
+            { icon: "🔹", label: "Ismail Hossain", detail: "Director of Operations, ChipMentors — FPGA-based learning, skill-building pathways, and industry readiness" },
+            { icon: "🔹", label: "Sirajul Alam Khan", detail: "CEO, Siliconova — Startup-driven chip innovation and emerging opportunities in the semiconductor ecosystem" },
+          ],
+          note: "Their sessions provided a valuable understanding of semiconductor research, industry expectations, RISC-V adoption, and career pathways in VLSI and SoC design.",
+        },
+        {
+          type: "subject",
+          emoji: "💡",
+          title: "What Inspired Me Most",
+          desc: "Key takeaways that strengthened my commitment to this field:",
+          topics: [
+            { icon: "🔹", label: "FPGA-Based Learning", detail: "Hands-on workshop — participants controlled built-in LEDs and implemented a Traffic Light Controller on FPGA" },
+            { icon: "🔹", label: "Industry-Academia Bridge", detail: "Direct connections between engineering students and industry leaders working on real silicon" },
+            { icon: "🔹", label: "Bangladesh Semiconductor Vision", detail: "The country's semiconductor journey is just beginning — exciting opportunities for the next generation of engineers" },
+            { icon: "🔹", label: "AI Accelerator Design", detail: "Confirmed my long-term goal: combining RISC-V architecture with AI accelerator development" },
+          ],
+          note: "Bangladesh's semiconductor journey is just beginning — and I am excited to be part of this transformation. Let's build the future of silicon innovation together. 🚀",
+        },
+        {
+          type: "image-grid",
+          caption: "World RISC-V Days Mymensingh — organized by Alpha Science Lab",
+          images: [
+            "/images/blog/riscv_days.jpg",
+            "/images/blog/riscv_workshop.jpg",
+            "/images/blog/riscv_days2.jpg",
+            "/images/blog/asad_kagozi.jpg",
+          ],
+        },
+      ],
+    },
+  },
+];
