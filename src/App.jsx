@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  House, User, FlaskConical, FolderOpen,
+  House, User, Briefcase, FlaskConical, FolderOpen,
   Trophy, Zap, BookText, Mail, Menu, X, ChevronLeft,
 } from "lucide-react";
 import Sidebar from "./components/Sidebar";
 import RightPanel from "./components/RightPanel";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
+import Experience from "./components/sections/Experience";
 import Research from "./components/sections/Research";
 import Projects from "./components/sections/Projects";
 import Achievements from "./components/sections/Achievements";
@@ -16,17 +17,17 @@ import Blog from "./components/sections/Blog";
 import Contact from "./components/sections/Contact";
 
 const sections = {
-  hero: Hero, about: About, research: Research, projects: Projects,
+  hero: Hero, about: About, experience: Experience, research: Research, projects: Projects,
   achievements: Achievements, skills: Skills, blog: Blog, contact: Contact,
 };
 
 const sectionLabels = {
-  hero: "Home", about: "About", research: "Research", projects: "Projects",
+  hero: "Home", about: "About", experience: "Experience", research: "Research", projects: "Projects",
   achievements: "Achievements", skills: "Skills", blog: "Blog", contact: "Contact",
 };
 
 const navIcons = {
-  hero: House, about: User, research: FlaskConical, projects: FolderOpen,
+  hero: House, about: User, experience: Briefcase, research: FlaskConical, projects: FolderOpen,
   achievements: Trophy, skills: Zap, blog: BookText, contact: Mail,
 };
 
@@ -47,16 +48,15 @@ export default function App() {
   };
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 1024);
+    const check = () => {
+      const mobile = window.innerWidth < 1024;
+      setIsMobile(mobile);
+      if (!mobile) setMobileOpen(false);
+    };
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
-
-  // close mobile drawer on resize to desktop
-  useEffect(() => {
-    if (!isMobile) setMobileOpen(false);
-  }, [isMobile]);
 
   const handleSelect = (id) => {
     setActive(id);

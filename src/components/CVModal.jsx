@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { profile, education, experience, research, projects, skills, certifications, achievements } from "../data/content";
 

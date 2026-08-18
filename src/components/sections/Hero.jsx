@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail } from "lucide-react";
 import { profile } from "../../data/content";
 import CVModal from "../CVModal";
 
@@ -43,8 +43,11 @@ export default function Hero({ onNavigate }) {
         const t = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30);
         return () => clearTimeout(t);
       } else {
-        setTaglineIndex((i) => (i + 1) % profile.taglines.length);
-        setTyping(true);
+        const t = setTimeout(() => {
+          setTaglineIndex((i) => (i + 1) % profile.taglines.length);
+          setTyping(true);
+        }, 10);
+        return () => clearTimeout(t);
       }
     }
   }, [displayed, typing, taglineIndex]);
@@ -116,7 +119,7 @@ export default function Hero({ onNavigate }) {
           className="flex flex-wrap gap-6">
           {[
             { value: "2",      label: "Publications" },
-            { value: "7+",     label: "Projects Built" },
+            { value: "8+",     label: "Projects Built" },
             { value: "3+",     label: "Client Countries" },
             { value: "Top 15", label: "Global (Ulkasemi)" },
           ].map(stat => (
@@ -174,7 +177,7 @@ export default function Hero({ onNavigate }) {
             className="flex gap-6 justify-center mt-6">
             {[
               { value: "2",  label: "Papers" },
-              { value: "7+", label: "Projects" },
+              { value: "8+", label: "Projects" },
               { value: "3+", label: "Countries" },
             ].map(s => (
               <div key={s.label} className="text-center">

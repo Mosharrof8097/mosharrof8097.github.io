@@ -1,6 +1,41 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 
 const achievementData = [
+  {
+    id: -1,
+    emoji: "🚀",
+    title: "Open-Source Launch: Opportunity Finder Dashboard",
+    org: "Personal Open-Source Project",
+    date: "2026",
+    category: "Publication",
+    desc: "Built and open-sourced Opportunity Finder — an automated dashboard collecting remote jobs, professor research contacts & verified emails (AI, DL, VLSI), scholarships, and BD Govt notices, with automated GitHub Pages deployment.",
+    photo: "/images/projects/opportunity_finder.png",
+    tags: ["OpenSource", "Python", "Automation", "WebScraping", "GitHubActions", "AI"],
+  },
+  {
+    id: 0,
+    emoji: "⚡",
+    title: "RISC-V Community Challenge — HaDes-V Bronze & Silver 2026 Badges",
+    org: "The Linux Foundation × RISC-V International",
+    date: "2026",
+    category: "Award",
+    desc: "Earned the RISC-V Community Challenge badges from The Linux Foundation & RISC-V International. Focused on hardware design, building a pipelined 32-bit RISC-V microcontroller core (HaDes-V), mastering efficient computing principles, and practical FPGA prototyping.",
+    photo: "/images/certs/riscv_hadesv_badge_2026.png",
+    tags: ["RISCV", "LinuxFoundation", "FPGA", "VLSI", "ComputerArchitecture", "OpenHardware"],
+  },
+  {
+    id: 1,
+    emoji: "🎓",
+    title: "12-Week Research Trainee Program Completed & Appointed Research Assistant",
+    org: "Learnix Research Lab",
+    date: "15 Aug 2026",
+    category: "Research",
+    desc: "Successfully completed the 12-Week Research Trainee Program at Learnix Research Lab (Certificate ID: LRL-2026-001) covering Machine Learning (ML), Deep Learning (DL), Federated Learning (FL), and Research Methodology. Appointed as Research Assistant to continue advancing AI research.",
+    photo: "/images/certs/learnix_trainee_cert.png",
+    tags: ["Machine Learning", "Deep Learning", "Federated Learning", "Research Assistant", "Learnix"],
+  },
   {
     id: 1,
     emoji: "🌟",
@@ -78,6 +113,8 @@ const categoryColors = {
 };
 
 export default function Achievements() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="max-w-4xl px-10 py-12">
       <motion.h2
@@ -100,18 +137,24 @@ export default function Achievements() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.08 }}
-            className="rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-blue-100 transition-all"
+            className="rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-blue-100 transition-all bg-white"
           >
             <div className="flex flex-col sm:flex-row">
               {/* Photo */}
               {item.photo && (
-                <div className="w-full sm:w-48 flex-shrink-0 bg-gray-50 overflow-hidden">
+                <div
+                  onClick={() => setSelectedImage(item)}
+                  className="w-full sm:w-56 flex-shrink-0 bg-gray-50 overflow-hidden cursor-pointer group relative flex items-center justify-center border-r border-gray-100"
+                >
                   <img
                     src={item.photo}
                     alt={item.title}
-                    className="w-full h-40 sm:h-full object-cover"
+                    className="w-full h-44 sm:h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={e => { e.target.parentElement.style.display = "none"; }}
                   />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+                    🔍 View Certificate
+                  </div>
                 </div>
               )}
 
@@ -139,7 +182,7 @@ export default function Achievements() {
                 <h3 className="font-bold text-gray-900 text-base leading-snug mb-1">
                   {item.title}
                 </h3>
-                <p className="text-blue-600 text-xs font-medium mb-2">{item.org}</p>
+                <p className="text-blue-600 text-xs font-semibold mb-2">{item.org}</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">{item.desc}</p>
 
                 <div className="flex flex-wrap gap-1.5">
@@ -154,6 +197,45 @@ export default function Achievements() {
           </motion.div>
         ))}
       </div>
+
+      {/* Lightbox Modal for Certificate / Photo */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-black/80 backdrop-blur-xs z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-4xl w-full bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-800"
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition-colors"
+              >
+                <X size={18} />
+              </button>
+              <div className="max-h-[80vh] flex items-center justify-center bg-black p-2">
+                <img
+                  src={selectedImage.photo}
+                  alt={selectedImage.title}
+                  className="max-h-[78vh] w-auto max-w-full object-contain rounded-lg"
+                />
+              </div>
+              <div className="p-4 bg-gray-900 text-white text-center border-t border-gray-800">
+                <p className="text-sm font-semibold">{selectedImage.title}</p>
+                <p className="text-xs text-blue-400 mt-1">{selectedImage.org} · {selectedImage.date}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

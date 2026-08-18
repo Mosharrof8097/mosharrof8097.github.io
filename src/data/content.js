@@ -31,14 +31,26 @@ export const education = [
 
 export const experience = [
   {
+    role: "Research Assistant",
+    org: "Learnix Research Lab",
+    period: "Aug 2026 – Present",
+    type: "Remote · AI & Data Science Lab",
+    points: [
+      "Promoted to Research Assistant following successful completion of the 12-Week Research Trainee Program (Certificate ID: LRL-2026-001)",
+      "Exploring Machine Learning (ML), Deep Learning (DL), and Federated Learning (FL) methodologies for advanced AI models",
+      "Conducting literature reviews and contributing to academic research papers targeting international journals and conferences",
+      "Collaborating with mentors and co-supervisors on cutting-edge AI research applications",
+    ],
+  },
+  {
     role: "Research Trainee",
     org: "Learnix Research Lab",
-    period: "Apr 2026 – Present",
-    type: "Remote · AI & Data Science",
+    period: "Apr 2026 – Aug 2026",
+    type: "Remote · AI & Data Science Lab",
     points: [
-      "Conducting AI/ML research and literature reviews",
-      "Contributing to research publications targeting IEEE/conference venues",
-      "Working on real-world AI problems under professional mentorship",
+      "Completed intensive 12-Week research training program covering ML, DL, Federated Learning, and research practices",
+      "Hands-on experience in research methodology, experimental setup, and academic paper drafting",
+      "Awarded Certificate of Completion (Certificate ID: LRL-2026-001) on August 15, 2026",
     ],
   },
   {
@@ -49,7 +61,7 @@ export const experience = [
     points: [
       "Exploring chip design, circuit analysis, and the future of semiconductor technology",
       "Co-organized World RISC-V Days Mymensingh with keynotes from Ulkasemi, ChipMentors, and Siliconova CEOs",
-      "Hosted hands-on RISC-V SoC Design on FPGA workshop — participants built Traffic Light Controller on FPGA",
+      "Hosted hands-on C++ Programming with Swadheen Microcontroller workshop & RISC-V SoC Design on FPGA workshop",
       "Selected as 1 of 15 global winners at Ulkasemi Seminar & Prize-Giving (645+ participants worldwide)",
     ],
   },
@@ -100,6 +112,22 @@ export const research = [
 ];
 
 export const projects = [
+  {
+    id: 0,
+    featured: true,
+    name: "Opportunity Finder 🚀",
+    tagline: "Open-Source Automated Opportunity & Research Aggregator",
+    category: "AI",
+    description:
+      "A fully automated open-source dashboard that continuously discovers remote jobs, professor research contacts (extracting verified emails from AI/VLSI paper databases), scholarships, and Bangladesh government notice boards, auto-deploying to GitHub Pages on schedule.",
+    tech: ["Python", "Automation", "Web Scraping", "GitHub Actions", "HTML/CSS", "JavaScript"],
+    highlights: ["Fully Automated Pipeline", "Professor Email Extractor", "Remote Job Aggregator", "BD Govt Notice Tracker", "100% Open Source"],
+    type: "Open Source",
+    client: null,
+    github: "https://github.com/Mosharrof1/opportunity-finder",
+    live: "https://mosharrof1.github.io/opportunity-finder",
+    image: "/images/projects/opportunity_finder.png",
+  },
   {
     id: 1,
     featured: true,
@@ -188,6 +216,20 @@ export const projects = [
     live: null,
   },
   {
+    id: 8,
+    name: "Battle Room BD",
+    tagline: "Play & Earn Esports Tournament Platform",
+    category: "Web",
+    description:
+      "A full-featured esports tournament platform for Bangladeshi gamers. Players can register, join paid match rooms across game categories (BGMI, Free Fire), and earn rewards. Includes a real-time wallet & withdrawal system, Google & email/password auth, Room ID/Pass distribution, admin dashboard for match management, and dark/light theme support.",
+    tech: ["HTML", "CSS", "JavaScript", "Firebase Auth", "Firebase Realtime DB"],
+    highlights: ["Play & Earn model", "Wallet & withdrawal", "Google Auth", "Admin dashboard"],
+    type: "Own Product",
+    client: null,
+    github: null,
+    live: null,
+  },
+  {
     id: 7,
     name: "Rice Disease Detection App",
     tagline: "AI-Powered Rice Crop Disease Classifier",
@@ -228,6 +270,22 @@ export const skills = {
 
 export const certifications = [
   {
+    name: "RISC-V Community Challenge — HaDes-V 2026",
+    issuer: "The Linux Foundation × RISC-V International",
+    date: "2026",
+    score: "Bronze & Silver Badges",
+    id: "HaDes-V-2026",
+    image: "/images/certs/riscv_hadesv_badge_2026.png",
+  },
+  {
+    name: "12-Week Research Trainee Program",
+    issuer: "Learnix Research Lab",
+    date: "August 15, 2026",
+    score: "Cert ID: LRL-2026-001",
+    id: "LRL-2026-001",
+    image: "/images/certs/learnix_trainee_cert.png",
+  },
+  {
     name: "Generative AI for Educators",
     issuer: "Google for Education × MIT",
     date: "November 2, 2025",
@@ -251,6 +309,27 @@ export const certifications = [
 ];
 
 export const achievements = [
+  {
+    title: "Released Open-Source 'Opportunity Finder 🚀' Dashboard",
+    desc: "Designed and open-sourced Opportunity Finder — an automated Python & GitHub Actions pipeline aggregating remote jobs, professor research contact emails, scholarships, and BD Govt notice board opportunities.",
+    year: "2026",
+    icon: "🚀",
+    photo: "/images/projects/opportunity_finder.png",
+  },
+  {
+    title: "RISC-V Community Challenge with HaDes-V Bronze & Silver 2026 Badges",
+    desc: "Earned the RISC-V Community Challenge badges from The Linux Foundation & RISC-V International for building a pipelined 32-bit RISC-V microcontroller (HaDes-V), mastering hardware design, efficient computing, and practical FPGA implementation.",
+    year: "2026",
+    icon: "⚡",
+    photo: "/images/certs/riscv_hadesv_badge_2026.png",
+  },
+  {
+    title: "Completed 12-Week Research Trainee Program & Appointed Research Assistant",
+    desc: "Successfully completed the 12-Week Research Trainee Program at Learnix Research Lab covering Machine Learning (ML), Deep Learning (DL), Federated Learning (FL), and Research Methodology (Cert ID: LRL-2026-001). Currently continuing as Research Assistant.",
+    year: "Aug 2026",
+    icon: "🎓",
+    photo: "/images/certs/learnix_trainee_cert.png",
+  },
   {
     title: "1 of 15 Global Winners — Ulkasemi Seminar",
     desc: "Selected from 645+ participants worldwide at Ulkasemi Seminar & Prize-Giving Ceremony, Ulkasemi Design Centre, Dhaka.",
@@ -575,3 +654,60 @@ export const blog = [
     },
   },
 ];
+
+export const workshops = [
+  {
+    id: "swadheen-microcontroller-workshop",
+    title: "C++ Programming with Swadheen Microcontroller (Hands-on Workshop)",
+    badge: "Hands-on Workshop Session Lead",
+    date: "17 August 2026",
+    organizer: "Alpha Science Lab (ASL)",
+    speakerRole: "Session Lead & Executive Member (ASL)",
+    description:
+      "Conducted an interactive hands-on training session on Embedded Systems and C++ Programming using the Swadheen Microcontroller, fostering hardware-level innovation and homegrown technology in Bangladesh.",
+    topics: [
+      "Embedded Systems & Real-World Applications",
+      "Microprocessor vs. Microcontroller Comparison",
+      "Internal Architecture & Components of Microcontrollers",
+      "GPIO Pin Configuration & Interfacing",
+      "UART, I²C & SPI Serial Communication Protocols",
+      "Arduino Ecosystem & Underlying MCU Principles",
+      "Swadheen Microcontroller & Hadi-V Architecture Development Ecosystem",
+    ],
+    reflection:
+      "For me, this workshop was more than just a teaching experience. It was an opportunity to share what we are learning and building through our own technological journey and to contribute, even in a small way, toward building homegrown technology in Bangladesh. 🇧🇩",
+    thanks: "Md. Monjurul Islam Bhuiyan and Jubaer Fahad for their dedication and contribution in making the session successful.",
+    tags: [
+      "Swadheen",
+      "HadiV",
+      "RISCV",
+      "EmbeddedSystems",
+      "CPlusPlus",
+      "Microcontroller",
+      "FirmwareDevelopment",
+      "AlphaScienceLab",
+      "VLSI",
+      "Bangladesh",
+      "MadeInBangladesh",
+    ],
+    images: [
+      {
+        path: "/images/experience/swadheen_workshop_1.jpg",
+        caption: "Workshop Banner & Swadheen Microcontroller Presentation Display",
+      },
+      {
+        path: "/images/experience/swadheen_workshop_2.jpg",
+        caption: "Delivering Session on Microcontroller Components & Architecture",
+      },
+      {
+        path: "/images/experience/swadheen_workshop_3.jpg",
+        caption: "Interactive Classroom & Active Participant Engagement",
+      },
+      {
+        path: "/images/experience/swadheen_workshop_4.jpg",
+        caption: "Explaining Microprocessor Fundamentals & Registers",
+      },
+    ],
+  },
+];
+

@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { profile, research, projects, blog, skills, certifications, achievements } from "../data/content";
+import { profile, research, projects, blog, skills, certifications, workshops } from "../data/content";
 
 // ── per-section panel components ──────────────────────────────
 
@@ -121,6 +121,45 @@ function AboutPanel() {
   );
 }
 
+function ExperiencePanel() {
+  return (
+    <div className="space-y-5">
+      <div>
+        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Conducting Workshops</p>
+        <div className="space-y-3">
+          {workshops.map((ws) => (
+            <div key={ws.id} className="p-3 rounded-xl border border-blue-100 bg-blue-50/40">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-blue-600 text-white">
+                {ws.date}
+              </span>
+              <p className="text-xs font-bold text-gray-800 mt-2 leading-snug">{ws.title}</p>
+              <p className="text-[11px] text-blue-600 mt-1 font-medium">{ws.organizer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Focus Domains</p>
+        <div className="flex flex-wrap gap-1.5">
+          {["Embedded Systems", "C++", "Swadheen MCU", "RISC-V", "VLSI", "Firmware", "AI Systems"].map((t) => (
+            <span key={t} className="text-xs px-2 py-1 bg-gray-50 text-gray-600 rounded-lg border border-gray-100">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="p-3 rounded-xl bg-green-50 border border-green-100">
+        <p className="text-xs font-bold text-green-800 mb-1">🇧🇩 Homegrown Tech</p>
+        <p className="text-xs text-green-700 leading-relaxed">
+          Promoting indigenous microcontroller architecture and embedded development in Bangladesh.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function ResearchPanel() {
   return (
     <div className="space-y-5">
@@ -232,18 +271,17 @@ function ProjectsPanel({ onFilterChange, activeFilter }) {
 }
 
 function AchievementsPanel() {
-  const categories = ["Award", "Research", "Publication", "Academic", "Certification"];
   return (
     <div className="space-y-5">
       <div>
         <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">By Category</p>
         <div className="space-y-2">
           {[
-            { cat: "Award",         count: 2, color: "bg-yellow-50 text-yellow-700 border-yellow-200" },
-            { cat: "Research",      count: 1, color: "bg-blue-50 text-blue-700 border-blue-200" },
+            { cat: "Award",         count: 3, color: "bg-yellow-50 text-yellow-700 border-yellow-200" },
+            { cat: "Certification", count: 3, color: "bg-teal-50 text-teal-700 border-teal-200" },
+            { cat: "Research",      count: 2, color: "bg-blue-50 text-blue-700 border-blue-200" },
             { cat: "Publication",   count: 1, color: "bg-purple-50 text-purple-700 border-purple-200" },
             { cat: "Academic",      count: 1, color: "bg-green-50 text-green-700 border-green-200" },
-            { cat: "Certification", count: 1, color: "bg-teal-50 text-teal-700 border-teal-200" },
           ].map(item => (
             <div key={item.cat} className="flex items-center justify-between p-2.5 rounded-xl bg-gray-50 border border-gray-100">
               <span className={`text-xs font-semibold px-2 py-0.5 rounded-lg border ${item.color}`}>{item.cat}</span>
@@ -364,6 +402,7 @@ function ContactPanel() {
 const panelMap = {
   hero:         { title: "Overview",     Comp: HeroPanel },
   about:        { title: "Profile",      Comp: AboutPanel },
+  experience:   { title: "Experience",   Comp: ExperiencePanel },
   research:     { title: "Research",     Comp: ResearchPanel },
   projects:     { title: "Projects",     Comp: ProjectsPanel },
   achievements: { title: "Achievements", Comp: AchievementsPanel },
@@ -372,7 +411,7 @@ const panelMap = {
   contact:      { title: "Contact",      Comp: ContactPanel },
 };
 
-export default function RightPanel({ active, onFilterChange, projectFilter, onNavigate, onOpenBlogPost }) {
+export default function RightPanel({ active, onFilterChange, projectFilter, onOpenBlogPost }) {
   const panel = panelMap[active] || panelMap.hero;
   const { title, Comp } = panel;
 

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  House, User, FlaskConical, FolderOpen,
+  House, User, Briefcase, FlaskConical, FolderOpen,
   Trophy, Zap, BookText, Mail, ChevronRight,
 } from "lucide-react";
 import { profile } from "../data/content";
@@ -8,6 +8,7 @@ import { profile } from "../data/content";
 const navItems = [
   { id: "hero",         label: "Home",         Icon: House },
   { id: "about",        label: "About",        Icon: User },
+  { id: "experience",   label: "Experience",   Icon: Briefcase },
   { id: "research",     label: "Research",     Icon: FlaskConical },
   { id: "projects",     label: "Projects",     Icon: FolderOpen },
   { id: "achievements", label: "Achievements", Icon: Trophy },
